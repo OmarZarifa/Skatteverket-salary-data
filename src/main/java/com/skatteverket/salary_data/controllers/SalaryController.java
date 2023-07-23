@@ -30,4 +30,12 @@ public class SalaryController {
         model.addAttribute("data", salary);
         return "singleRecordView";
     }
+    @GetMapping("/getRecordByTabellNrAndValue")
+    public String getRecordByTabellNrAndValue(@RequestParam int tabellNr, @RequestParam int value, Model model) {
+        // Find the record that matches the given tabellNr and value range
+        Salary salary = salaryRepository.findByTabellNrAndInkomstFromLessThanEqualAndInkomstTomGreaterThanEqual(tabellNr, value, value);
+
+        model.addAttribute("data", salary);
+        return "singleRecordView";
+    }
 }

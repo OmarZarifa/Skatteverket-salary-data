@@ -7,6 +7,18 @@
 </head>
 <body>
 <h1>All Data</h1>
+
+<!-- New form to capture user input -->
+<form th:action="@{/getRecordByTabellNrAndValue}" method="get">
+    <label for="tabellNr">Enter Tabell Nr:</label>
+    <input type="number" id="tabellNr" name="tabellNr" required />
+
+    <label for="value">Enter Value:</label>
+    <input type="number" id="value" name="value" required />
+
+    <button type="submit">Get Record</button>
+</form>
+
 <!-- Add a form to capture user input -->
 <form th:action="@{/getOneRecord}" method="get">
     <label for="recordId">Enter Record ID:</label>
