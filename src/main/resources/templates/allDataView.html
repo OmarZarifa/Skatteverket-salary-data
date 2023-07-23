@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Data View</title>
+</head>
+<body>
+<h1>All Data</h1>
+<!-- Add a form to capture user input -->
+<form th:action="@{/getOneRecord}" method="get">
+    <label for="recordId">Enter Record ID:</label>
+    <input type="number" id="recordId" name="id" required />
+    <button type="submit">View Record</button>
+</form>
+<table>
+    <thead>
+    <tr>
+        <th>Id</th>
+        <th>AntalDagar</th>
+        <th>TabellNr</th>
+        <th>InkomstFrom</th>
+        <th>InkomstTom</th>
+        <th>Kolumn1</th>
+        <th>Kolumn2</th>
+        <th>Kolumn3</th>
+        <th>Kolumn4</th>
+        <th>Kolumn5</th>
+        <th>Kolumn6</th>
+        <th>Kolumn7</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="data : ${dataList}">
+        <td th:text="${data.id}"></td>
+        <td th:text="${data.antalDagar}"></td>
+        <td th:text="${data.tabellNr}"></td>
+        <td th:text="${data.inkomstFrom}"></td>
+        <td th:text="${data.inkomstTom}"></td>
+        <td th:text="${data.kolumn1}"></td>
+        <td th:text="${data.kolumn2}"></td>
+        <td th:text="${data.kolumn3}"></td>
+        <td th:text="${data.kolumn4}"></td>
+        <td th:text="${data.kolumn5}"></td>
+        <td th:text="${data.kolumn6}"></td>
+        <td th:text="${data.kolumn7}"></td>
+    </tr>
+    </tbody>
+</table>
+
+
+</body>
+</html>
+
+
+
