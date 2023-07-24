@@ -4,14 +4,88 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>All Data View</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f7f7f7;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        /* Form Styling */
+        form {
+            display: flex;
+            flex-direction: column;
+            max-width: 400px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 6px;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        form label {
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        form input[type="number"] {
+            margin-bottom: 15px;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        form button {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        form button:hover {
+            background-color: #0056b3;
+        }
+
+        /* Table Styling */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        table th, table td {
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+            text-align: center;
+        }
+
+        table th {
+            background-color: #007bff;
+            color: #fff;
+        }
+
+        /* Alternate row background color for better readability */
+        table tbody tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+    </style>
 </head>
 <body>
-<h1>All Data</h1>
+<h1>Skatteverket</h1>
 
 <!-- New form to capture user input -->
 <form th:action="@{/getRecordByTabellNrAndValue}" method="get">
-    <label for="tabellNr">Enter Tabell Nr:</label>
-    <input type="number" id="tabellNr" name="tabellNr" required />
+    <label for="tabellNr">Enter Tabell Nr (between 29 and 42):</label>
+    <input type="number" id="tabellNr" name="tabellNr" required min="29" max="42" />
 
     <label for="value">Enter Value:</label>
     <input type="number" id="value" name="value" required />
@@ -19,12 +93,7 @@
     <button type="submit">Get Record</button>
 </form>
 
-<!-- Add a form to capture user input -->
-<form th:action="@{/getOneRecord}" method="get">
-    <label for="recordId">Enter Record ID:</label>
-    <input type="number" id="recordId" name="id" required />
-    <button type="submit">View Record</button>
-</form>
+<!-- Table to display data -->
 <table>
     <thead>
     <tr>
@@ -43,6 +112,7 @@
     </tr>
     </thead>
     <tbody>
+
     <tr th:each="data : ${dataList}">
         <td th:text="${data.id}"></td>
         <td th:text="${data.antalDagar}"></td>
@@ -60,9 +130,9 @@
     </tbody>
 </table>
 
-
 </body>
 </html>
+
 
 
 

@@ -4,9 +4,70 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Single Record View</title>
+  <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f7f7f7;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        /* Table Styling */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px auto;
+            background-color: #fff;
+            border-radius: 6px;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        table th, table td {
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+            text-align: center;
+        }
+
+        table th {
+            background-color: #007bff;
+            color: #fff;
+        }
+
+        table tbody tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        /* Message Styling */
+        .message {
+            text-align: center;
+            margin: 20px auto;
+            max-width: 400px;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 6px;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .message p {
+            font-size: 18px;
+            color: #555;
+        }
+
+        .error {
+            color: #ff0000;
+            font-weight: bold;
+        }
+    </style>
 </head>
 <body>
 <h1>Single Record View</h1>
+
+<!-- Table to display data -->
 <table th:if="${data}">
   <thead>
   <tr>
@@ -42,6 +103,13 @@
   </tbody>
 </table>
 
-<p th:unless="${data}">Record not found!</p>
+<!-- Message if data is not found -->
+<div class="message" th:unless="${data}">
+  <p class="error">Record not found!</p>
+</div>
+
 </body>
 </html>
+
+
+
