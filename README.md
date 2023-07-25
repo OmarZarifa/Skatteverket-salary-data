@@ -21,7 +21,7 @@ Note: Make sure that the MySQL server you are importing the database into has th
 ## Running the Application
 
 ### Prerequirements:
-You have to have the following things installed on your computer:
+You have to do the following things installed on your computer:
 1. Java Development Kit (JDK): To develop and run Java applications, you need to have JDK 8 or later versions installed on your computer.
 2. MySQL database: You need to have MySQL server installed on your computer.
 3. IDE: You need an Integrated Development Environment (IDE) to write, test, and run your Java application. Some popular IDEs for Java development include IntelliJ IDEA, Eclipse, and NetBeans.
@@ -36,9 +36,13 @@ You have to have the following things installed on your computer:
 
     http://localhost:8080
 
+
+
 ## Contributions
 
 Contributions to the Skatteverket Web Application are welcome! If you find any issues or want to add new features, feel free to submit a pull request.
+
+
 
 ## Contact
 
