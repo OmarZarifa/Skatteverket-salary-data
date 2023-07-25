@@ -11,11 +11,9 @@
 
 <!-- New form to capture user input -->
 <form th:action="@{/getRecordByTabellNrAndValue}" method="get">
-    <label for="tabellNr">Enter Tabell Nr (between 29 and 42):</label>
-    <input type="number" id="tabellNr" name="tabellNr" required min="29" max="42" />
-
-    <label for="value">Enter Value:</label>
-    <input type="number" id="value" name="value" required />
+    <input type="number"  name="tabellNr" required min="29" max="42" placeholder="Table Number (29-42)" />
+    
+    <input type="number" name="value" required placeholder="Salary" />
 
     <button type="submit">Get Record</button>
 </form>
@@ -25,10 +23,10 @@
     <thead>
     <tr>
         <th>Id</th>
-        <th>AntalDagar</th>
-        <th>TabellNr</th>
-        <th>InkomstFrom</th>
-        <th>InkomstTom</th>
+        <th>Antal Dagar</th>
+        <th>Tabell Nr</th>
+        <th>Inkomst From</th>
+        <th>Inkomst Tom</th>
         <th>Kolumn1</th>
         <th>Kolumn2</th>
         <th>Kolumn3</th>

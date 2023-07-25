@@ -1,54 +1,45 @@
-#Skatteverket Web Application
+# Skatteverket Web Application
 
-The Skatteverket Web Application is a Java-based web application built using Spring Boot, HTML, and MySQL. The purpose of this application is to make it easy for users to search for tax information by providing the table number and income value to retrieve relevant information.
-Getting Started
+## Introduction
+The Skatteverket Web Application is a Java-based web application built using Spring Boot, HTML, CSS and MySQL. The purpose of this application is to make it easy for users to search for tax information by providing the table number and income value to retrieve relevant information.
 
-To run the Skatteverket Web Application locally, follow these instructions:
-Prerequisites
+## Setting up the Database
 
-    Java Development Kit (JDK) 8 or higher
-    Maven
-    MySQL Server
+#### Download MySQL dump file "skatteverket.sql", which includes the table structure and data for a database named "skatteverket". To import this database into your MySQL server, follow these steps:
 
-Installation
+1. Open MySQL Workbench or any other MySQL client tool.
+2. Create a new database with the same name as the one in the dump file ("skatteverket").
+3. In the MySQL client tool, go to the "Server" menu and select "Data Import".
+4. In the "Import Options" section, select "Import from Self-Contained File".
+5. Click on the "..." button to browse and select the dump file.
+6. In the "Default Target Schema" field, select the database you created in step 2 ("skatteverket").
+7. Click on the "Start Import" button to begin the import process.
+8. Once the import is completed, you can view the database structure and data in the MySQL client tool.
 
-    Clone the repository from GitHub URL.
-    Navigate to the project directory.
+Note: Make sure that the MySQL server you are importing the database into has the same version or a newer version than the one used to create the dump file.
 
-Configuration
+## Running the Application
 
-    Open src/main/resources/application.properties.
-    Configure the MySQL database connection properties (URL, username, and password) to match your local setup.
+### Prerequirements:
+You have to have the following things installed on your computer:
+1. Java Development Kit (JDK): To develop and run Java applications, you need to have JDK 8 or later versions installed on your computer.
+2. MySQL database: You need to have MySQL server installed on your computer.
+3. IDE: You need an Integrated Development Environment (IDE) to write, test, and run your Java application. Some popular IDEs for Java development include IntelliJ IDEA, Eclipse, and NetBeans.
 
-Database Setup
+### Installation and configuration:
+1. Clone the repository from GitHub URL.
+2. Open src/main/resources/application.properties.
+3. Configure the MySQL database connection properties (URL, username, and password) to match your local setup.
+4. Click on "Run" from the main menu in the SalaryDataApplication class.
+5. The application will be accessible at:
 
-    Create a MySQL database with the required schema for the application. You can find the SQL script in src/main/resources/db-scripts/init.sql.
-    Run the SQL script to create the necessary tables.
 
-Running the Application
+    http://localhost:8080
 
-    Open a terminal or command prompt.
-    Navigate to the project directory.
-    Run the following command to build and run the application:
-
-arduino
-
-mvn spring-boot:run
-
-    The application will be accessible at http://localhost:8080.
-
-How to Use
-
-    Launch the Skatteverket Web Application in your web browser using http://localhost:8080.
-    You will be presented with a simple user interface to search for tax information.
-    Enter the table number and income value you wish to retrieve information for.
-    Click the "Search" button to initiate the search.
-    The application will query the MySQL database and display the relevant tax information based on your input.
-
-Contributions
+## Contributions
 
 Contributions to the Skatteverket Web Application are welcome! If you find any issues or want to add new features, feel free to submit a pull request.
 
-Contact
+## Contact
 
 If you have any questions or need support, please contact omar.zarifa@gmail.com
