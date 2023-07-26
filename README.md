@@ -5,7 +5,7 @@ The Skatteverket Web Application is a Java-based web application built using Spr
 
 ## Setting up the Database
 
-#### Download MySQL dump file "skatteverket.sql", which includes the table structure and data for a database named "skatteverket". To import this database into your MySQL server, follow these steps:
+#### Find the MySQL dump file "skatteverket.sql", which includes the table structure and data for a database named "skatteverket". To import this database into your MySQL server, follow these steps:
 
 1. Open MySQL Workbench or any other MySQL client tool.
 2. Create a new database with the same name as the one in the dump file ("skatteverket").
@@ -35,12 +35,6 @@ You have to do the following things installed on your computer:
 
 
     http://localhost:8080
-
-
-
-## Contributions
-
-Contributions to the Skatteverket Web Application are welcome! If you find any issues or want to add new features, feel free to submit a pull request.
 
 
 
