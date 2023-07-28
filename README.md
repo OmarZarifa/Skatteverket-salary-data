@@ -43,3 +43,8 @@ Please note that this project is developed independently and is not associated w
 ## Contact
 
 If you have any questions or need support, please contact omar.zarifa@gmail.com
+
+## ScreenShots
+
+### Main page
+![Main page] ()
