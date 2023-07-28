@@ -36,6 +36,8 @@ You have to do the following things installed on your computer:
 
     http://localhost:8080
 
+## OBS:
+Please note that this project is developed independently and is not associated with any official organization.
 
 
 ## Contact
