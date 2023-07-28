@@ -17,43 +17,11 @@
 
     <button type="submit">Get Record</button>
 </form>
+<!-- Link to Skatteverket website -->
+<div class="skatteverket-link">
+    <p>Teknisk beskrivning för <a href="https://www.skatteverket.se/foretag/arbetsgivare/arbetsgivaravgifterochskatteavdrag/skattetabeller/tekniskbeskrivningforskattetabeller.4.319dc1451507f2f99e86ee.html" target="_blank" rel="noopener">Skattetabeller</a>.</p>
+</div>
 
-<!-- Table to display data -->
-<table>
-    <thead>
-    <tr>
-        <th>Id</th>
-        <th>Antal Dagar</th>
-        <th>Tabell Nr</th>
-        <th>Inkomst From</th>
-        <th>Inkomst Tom</th>
-        <th>Kolumn1</th>
-        <th>Kolumn2</th>
-        <th>Kolumn3</th>
-        <th>Kolumn4</th>
-        <th>Kolumn5</th>
-        <th>Kolumn6</th>
-        <th>Kolumn7</th>
-    </tr>
-    </thead>
-    <tbody>
-
-    <tr th:each="data : ${dataList}">
-        <td th:text="${data.id}"></td>
-        <td th:text="${data.antalDagar}"></td>
-        <td th:text="${data.tabellNr}"></td>
-        <td th:text="${data.inkomstFrom}"></td>
-        <td th:text="${data.inkomstTom}"></td>
-        <td th:text="${data.kolumn1}"></td>
-        <td th:text="${data.kolumn2}"></td>
-        <td th:text="${data.kolumn3}"></td>
-        <td th:text="${data.kolumn4}"></td>
-        <td th:text="${data.kolumn5}"></td>
-        <td th:text="${data.kolumn6}"></td>
-        <td th:text="${data.kolumn7}"></td>
-    </tr>
-    </tbody>
-</table>
 
 </body>
 </html>

@@ -7,7 +7,14 @@
   <link th:href="@{/css/styles.css}" rel="stylesheet" />
 </head>
 <body>
-<h1>Single Record View</h1>
+<h1>Result</h1>
+
+<!-- User Input Display -->
+<div class="user-input-container">
+  <p class="user-input-label">Table Number: <span class="user-input-value" th:text="${param.tabellNr}"></span></p>
+  <p class="user-input-label">Salary Value: <span class="user-input-value" th:text="${param.value}"></span></p>
+</div>
+
 
 <!-- Table to display data -->
 <table th:if="${data}">
@@ -48,6 +55,15 @@
 <!-- Message if data is not found -->
 <div class="message" th:unless="${data}">
   <p class="error">Record not found!</p>
+</div>
+
+<!-- Link to Skatteverket website -->
+<div class="skatteverket-link">
+  <p>Teknisk beskrivning för <a href="https://www.skatteverket.se/foretag/arbetsgivare/arbetsgivaravgifterochskatteavdrag/skattetabeller/tekniskbeskrivningforskattetabeller.4.319dc1451507f2f99e86ee.html" target="_blank" rel="noopener">Skattetabeller</a>.</p>
+</div>
+
+<div class="back-button-container">
+  <a class="back-button" href="javascript:history.back()">Back</a>
 </div>
 
 </body>
