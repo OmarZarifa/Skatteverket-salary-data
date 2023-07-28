@@ -47,4 +47,7 @@ If you have any questions or need support, please contact omar.zarifa@gmail.com
 ## ScreenShots
 
 ### Main page
-![Main page] ()
+![Main page] (https://github.com/OmarZarifa/Skatteverket-salary-data/blob/master/ScreenShots/App%20main-page.png?raw=true)
+
+### Result page
+![Result page] (https://github.com/OmarZarifa/Skatteverket-salary-data/blob/master/ScreenShots/Result%20page.png?raw=true)
