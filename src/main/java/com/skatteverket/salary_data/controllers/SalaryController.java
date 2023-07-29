@@ -24,12 +24,6 @@ public class SalaryController {
         return "allDataView";
     }
 
-    @GetMapping("/getOneRecord")
-    public String getOneRecord(@RequestParam Long id, Model model) {
-        Salary salary = salaryRepository.findById(id).orElse(null);
-        model.addAttribute("data", salary);
-        return "singleRecordView";
-    }
     @GetMapping("/getRecordByTabellNrAndValue")
     public String getRecordByTabellNrAndValue(@RequestParam int tabellNr, @RequestParam int value, Model model) {
         // Find the record that matches the given tabellNr and value range
